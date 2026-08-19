@@ -1,3 +1,4 @@
+
 .rti-container {
   max-width: 700px;
   margin: 0 auto;
@@ -159,4 +160,88 @@
   background: #f3f4f6;
   color: #1f2937;
   margin-right: 20%;
+}
+/* Draft Container Box */
+.draft-section-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  font-family: inherit;
+}
+
+/* Heading style */
+.draft-section-box h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+/* Draft text preview area */
+.draft-section-box pre {
+  background: #f8fafc;
+  color: #334155;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+/* Actions buttons container */
+.draft-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Buttons Styling */
+.draft-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Download PDF Button Styling */
+.draft-actions button:first-child {
+  background-color: #2563eb;
+  color: white;
+}
+
+.draft-actions button:first-child:hover {
+  background-color: #1d4ed8;
+}
+
+/* Copy Button Styling */
+.draft-actions button:last-child {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.draft-actions button:last-child:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Button click effect */
+.draft-actions button:active {
+  transform: scale(0.98);
 }

@@ -1,57 +1,50 @@
+/* Main Home Page Layout */
 .home {
-  min-height: calc(100vh - 72px);
-  color: #0f172a;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 60px 20px;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-
-/* HERO */
-
+/* ================= HERO SECTION ================= */
 .hero {
-  min-height: 520px;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
   align-items: center;
-  justify-content: space-between;
-
-  gap: 70px;
-
-  padding: 70px 9%;
-
-  background:
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(37, 99, 235, 0.12),
-      transparent 35%
-    ),
-    #f8fafc;
+  padding: 40px 0;
+  margin-bottom: 60px;
 }
 
 .hero-content {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* Badge Styling */
 .badge {
-  display: inline-block;
-
-  padding: 7px 13px;
-  margin-bottom: 20px;
-
-  border-radius: 30px;
-
-  background: #eff6ff;
+  display: inline-flex;
+  align-items: center;
+  background-color: #eff6ff;
   color: #2563eb;
-
+  padding: 6px 14px;
+  border-radius: 20px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
 }
 
+/* Hero Headings */
 .hero h1 {
-  margin: 0;
-
-  font-size: 58px;
-  line-height: 1.05;
-
-  letter-spacing: -2px;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #1e293b;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 
 .hero h1 span {
@@ -59,255 +52,217 @@
 }
 
 .hero p {
-  margin: 22px 0 30px;
-
+  font-size: 17px;
   color: #64748b;
-
-  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 500px;
 }
 
+/* Hero CTA Button */
 .hero-btn {
-  display: inline-block;
-
-  padding: 14px 22px;
-
-  border-radius: 9px;
-
+  display: inline-flex;
+  align-items: center;
+  background-color: #2563eb;
   color: white;
-  background: #2563eb;
-
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-
-  font-weight: 700;
-
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
-
-  transition: 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
 }
 
 .hero-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
+  background-color: #1d4ed8;
+}
+
+.hero-btn:active {
+  transform: scale(0.98);
 }
 
 
-/* AI CARD */
-
+/* ================= AI PREVIEW CARD ================= */
 .hero-card {
-  width: 350px;
-
-  padding: 22px;
-
-  border-radius: 18px;
-
-  background: white;
-
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 }
 
 .card-top {
-  padding-bottom: 16px;
-
-  border-bottom: 1px solid #e2e8f0;
-
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
 }
 
 .dot {
-  display: inline-block;
-
-  width: 8px;
-  height: 8px;
-
-  margin-right: 8px;
-
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e; /* Green active dot */
   border-radius: 50%;
-
-  background: #22c55e;
+  display: inline-block;
 }
 
 .question {
-  margin: 18px 0 12px;
-
-  padding: 13px;
-
-  border-radius: 10px;
-
-  background: #f1f5f9;
-
-  color: #475569;
-
-  font-size: 13px;
+  background-color: #f8fafc;
+  border-left: 4px solid #cbd5e1;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: #334155;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .answer {
-  padding: 15px;
-
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
   border-radius: 10px;
+  padding: 16px;
+  font-size: 14px;
+  color: #1e293b;
+}
 
-  background: #eff6ff;
-
-  color: #334155;
-
-  font-size: 13px;
+.answer strong {
+  color: #1d4ed8;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .answer p {
-  margin: 8px 0 14px;
-
-  color: #64748b;
-
+  color: #475569;
+  margin-bottom: 12px;
   font-size: 13px;
 }
 
 .answer div {
-  margin-top: 8px;
-
-  color: #2563eb;
-
-  font-weight: 600;
+  font-size: 13px;
+  color: #15803d;
+  font-weight: 500;
+  margin-top: 4px;
 }
 
 
-/* SERVICES */
-
+/* ================= SERVICES SECTION ================= */
 .services {
-  padding: 75px 9%;
-  background: white;
+  margin-bottom: 60px;
 }
 
 .section-title {
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .section-title span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
   color: #2563eb;
-
-  font-size: 11px;
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .section-title h2 {
-  margin-top: 8px;
-
-  font-size: 34px;
+  font-size: 30px;
+  color: #1e293b;
+  font-weight: 700;
 }
 
 .section-title h2 span {
-  font-size: inherit;
-  letter-spacing: normal;
+  color: #64748b;
 }
-
-
-/* SERVICE CARDS */
 
 .service-grid {
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-
-  max-width: 900px;
 }
 
 .service-card {
   display: flex;
-
   gap: 20px;
-
-  padding: 25px;
-
-  text-decoration: none;
-
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-
-  border-radius: 15px;
-
-  background: white;
-
-  transition: 0.25s ease;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #bfdbfe;
-
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
 }
 
 .service-icon {
-  min-width: 50px;
+  width: 50px;
   height: 50px;
-
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 12px;
-
-  font-size: 23px;
+  font-size: 22px;
+  flex-shrink: 0;
 }
 
-.blue {
-  background: #eff6ff;
+.service-icon.blue {
+  background-color: #eff6ff;
 }
 
-.orange {
-  background: #fff7ed;
+.service-icon.orange {
+  background-color: #fff7ed;
 }
 
 .service-card h3 {
-  margin: 0 0 8px;
-
-  color: #0f172a;
-
-  font-size: 19px;
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .service-card p {
-  margin: 0 0 13px;
-
-  color: #64748b;
-
   font-size: 14px;
-
+  color: #64748b;
   line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .service-card span {
-  color: #2563eb;
-
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
+  color: #2563eb;
+  display: inline-flex;
+  align-items: center;
 }
 
 
-/* CTA */
-
+/* ================= BOTTOM CTA SECTION ================= */
 .bottom-cta {
-  margin: 55px 9% 70px;
-
-  padding: 40px;
-
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 20px;
+  padding: 50px 30px;
   text-align: center;
-
-  border-radius: 18px;
-
-  background: #172554;
-
   color: white;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
 }
 
 .bottom-cta h2 {
-  margin: 0;
-
-  font-size: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 .bottom-cta h2 span {
@@ -315,22 +270,84 @@
 }
 
 .bottom-cta p {
-  margin: 10px 0 20px;
-
-  color: #bfdbfe;
+  font-size: 16px;
+  color: #94a3b8;
+  margin-bottom: 24px;
 }
 
 .bottom-cta a {
-  display: inline-block;
-
-  padding: 11px 20px;
-
+  display: inline-flex;
+  align-items: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 26px;
   border-radius: 8px;
-
-  background: white;
-  color: #1e3a8a;
-
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
 
-  font-weight: 700;
+.bottom-cta a:hover {
+  background-color: #1d4ed8;
+}
+
+.bottom-cta a:active {
+  transform: scale(0.98);
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .hero-btn {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 10px 15px 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .bottom-cta {
+    padding: 35px 20px;
+  }
+
+  .bottom-cta h2 {
+    font-size: 24px;
+  }
 }

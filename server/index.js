@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config()
 import rtiRoutes from "./src/routes/rtiRoutes.js"
-
+import rightsRoutes from "./src/routes/rightsRoutes.js"
 dotenv.config();
 
 const app = express();
@@ -12,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/rti", rtiRoutes);
+app.use("/api/rights", rightsRoutes);
 
 app.get("/", (req, res) => {
   res.json({

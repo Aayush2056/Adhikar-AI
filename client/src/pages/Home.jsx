@@ -109,7 +109,7 @@ function Home() {
             </div>
 
             <div>
-              <h3>RTI Assistant</h3>
+              <h3>RTI Drafting</h3>
 
               <p>
                 Turn your question into a

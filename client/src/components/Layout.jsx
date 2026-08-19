@@ -21,7 +21,7 @@ function Layout() {
     </NavLink>
 
     <NavLink to="/rti">
-      RTI Assistant
+      RTI Drafting
     </NavLink>
 
     <NavLink to="/schemes">

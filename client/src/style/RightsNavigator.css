@@ -1,0 +1,179 @@
+/* Rights Navigator Main Container */
+.rights-container {
+  max-width: 650px;
+  margin: 30px auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  font-family: inherit;
+}
+
+/* Headings & Subtext */
+.rights-container h2 {
+  margin-top: 0;
+  color: #1e293b;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.rights-container p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Category Dropdown Select */
+.rights-container select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #f8fafc;
+  margin-bottom: 15px;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.rights-container select:focus {
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+/* Problem Textarea Input */
+.rights-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #f8fafc;
+  margin-bottom: 15px;
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.rights-container textarea:focus {
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+/* Action Button */
+.rights-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.rights-container button:hover {
+  background-color: #1d4ed8;
+}
+
+.rights-container button:active {
+  transform: scale(0.99);
+}
+
+.rights-container button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Advice Output Box (Auto-scroll target) */
+.advice-box {
+  margin-top: 25px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.advice-box h3 {
+  margin-top: 0;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.advice-box pre {
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Smooth fade-in effect when response loads */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Card container for each Q&A */
+.qa-card {
+  margin-bottom: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* User query header inside card */
+.user-query-badge {
+  background: #f1f5f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.user-query-badge span {
+  font-size: 11px;
+  background: #2563eb;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.user-query-badge p {
+  margin: 6px 0 0 0;
+  color: #1e293b;
+}
+
+/* Input section spacing at bottom */
+.input-section {
+  margin-top: 20px;
+  border-top: 2px solid #f1f5f9;
+  padding-top: 15px;
+}

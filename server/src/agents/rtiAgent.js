@@ -78,17 +78,32 @@ IMPORTANT:
 
   const response = await ai.models.generateContent({
     model: "gemini-3.6-flash", 
-    contents: prompt,
-    config: {
-     tools: [{ googleSearch: {} }], 
-},
+     contents: prompt,
+    
   });
 
   const output = response.text;
+ let draftContent = null;
+  let conversationalReply = output;
 
+  if (output.includes("APPLICATION:")) {
+    // 1. "APPLICATION:" ke baad ka sara text nikal lo
+    const parts = output.split("APPLICATION:");
+    
+    // 2. Sirf application wala hissa draft me jayega
+    draftContent = parts[1] ? parts[1].trim() : output;
+
+    // 3. Agar "IMPORTANT:" ya kuch aur niche likha hai, toh use bhi draft me se saaf kar sakte hain
+    if (draftContent.includes("IMPORTANT:")) {
+      draftContent = draftContent.split("IMPORTANT:")[0].trim();
+    }
+
+    // 4. Chat window me dikhane ke liye normal reply
+    conversationalReply = "Maine aapke diye gaye details ke aadhar par RTI application ka draft taiyar kar diya hai. Neeche check karein:";
+  }
   return {
     reply: output,
-    draft: null,
+    draft: draftContent,
   };
 };
 // 
