@@ -19,7 +19,9 @@ IMPORTANT INSTRUCTIONS:
 1. Explain the user's rights in simple, clear Hinglish/Hindi so a common person can understand.
 2. Do not use complex legal jargon without explaining it.
 3. Provide step-by-step actionable advice (e.g., Send a legal notice, approach Consumer Forum, file a complaint with Labour Commissioner, etc.).
+
 4. Add a standard disclaimer at the end that this is legal information, not formal legal advice.
+5.remove the bullet point [*,**,***,#]
 `;
 
   try {
