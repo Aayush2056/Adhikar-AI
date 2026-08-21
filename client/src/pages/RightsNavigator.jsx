@@ -37,7 +37,7 @@ function RightsNavigator() {
     setConversation(prev => [...prev, newItem]);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/rights", {
+      const res = await axios.post("http://localhost:3000/api/rights/", {
         category: selectedCategory,
         query: userQuery
       });
