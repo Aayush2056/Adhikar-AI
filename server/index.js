@@ -4,9 +4,13 @@ import dotenv from "dotenv";
 dotenv.config()
 import rtiRoutes from "./src/routes/rtiRoutes.js"
 import rightsRoutes from "./src/routes/rightsRoutes.js"
+<<<<<<< HEAD
 import schemeRoutes from "./src/routes/schemeRoutes.js"
 
 dotenv.config();
+=======
+import formRoutes from "./src/routes/formRoutes.js"
+>>>>>>> upstream/main
 
 const app = express();
 
@@ -15,8 +19,12 @@ app.use(express.json());
 
 app.use("/api/rti", rtiRoutes);
 app.use("/api/rights", rightsRoutes);
+<<<<<<< HEAD
 app.use("/api/schemes", schemeRoutes);
 
+=======
+app.use("/api/form",formRoutes)
+>>>>>>> upstream/main
 
 app.get("/", (req, res) => {
   res.json({
