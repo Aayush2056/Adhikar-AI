@@ -34,12 +34,14 @@ Administrative paperwork and legal documentation are streamlined using intellige
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack (MERN)
 
-* **Frontend:** React.js / Progressive Web App (PWA) framework optimized for rapid mobile and web navigation.
-* **Backend:** Asynchronous Python backend powered by FastAPI for lightning-fast request processing.
-* **AI & Natural Language Processing:** Context-aware language models fine-tuned on Indian statutory frameworks, case laws, and administrative procedures.
-* **Database & Storage:** Secure relational data management ensuring strict user privacy and document security.
+AdhikarAI is built using the modern **MERN** stack for a scalable, high-performance web architecture:
+
+* **MongoDB:** NoSQL database for flexible storage of user profiles, dynamic form schemas, schemes database, and legal reference documents.
+* **Express.js:** Fast, minimalist backend framework running on Node.js to handle API routing, authentication, and integration with AI models.
+* **React.js:** Dynamic, component-based frontend library providing a responsive and accessible user interface across devices.
+* **Node.js:** Scalable JavaScript runtime environment powering the server-side logic a
 
 ---
 
@@ -48,13 +50,8 @@ Administrative paperwork and legal documentation are streamlined using intellige
 To run AdhikarAI locally for development or contribution purposes:
 
 ### Prerequisites
-* Node.js & npm
-* Python 3.8+
-* PostgreSQL
+* react js
+* express
+* mongodb
+* geimin api key
 
-### Installation Steps
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/adhikar-ai.git](https://github.com/your-username/adhikar-ai.git)
-   cd adhikar-ai
