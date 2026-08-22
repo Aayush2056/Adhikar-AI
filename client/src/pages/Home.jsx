@@ -37,7 +37,7 @@ function Home() {
 
           <div className="card-top">
             <span className="dot"></span>
-            CivicAI Assistant
+        AdhikarAI Assistant
           </div>
 
           <div className="question">

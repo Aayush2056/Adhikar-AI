@@ -7,6 +7,7 @@ import RTIAssistant from './pages/RTIAssistant.jsx'
 import RightsNavigator from './pages/RightsNavigator.jsx'
 import SchemeAssistant from './pages/SchemeAssistant.jsx' 
 import FormFiller from './pages/FormFiller.jsx' 
+import About from './pages/About.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
        {
         path: "forms",
         element: <FormFiller />,
+      },
+       {
+        path: "about",
+        element: <About />,
       },
     ],
   },

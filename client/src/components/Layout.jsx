@@ -7,7 +7,7 @@ function Layout() {
      <nav className="navbar">
 
   <div className="logo">
-    Civic<span>AI</span>
+   Adhikar<span>AI</span>
   </div>
 
   <div className="nav-links">
